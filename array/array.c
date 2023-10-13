@@ -112,7 +112,7 @@ void func(insert_arr, _ARR_TYPE)(_ARR_TYPE **arr, uint64_t index, _ARR_TYPE *ins
     _ARR_TYPE *tmp = func(init, _ARR_TYPE)(func(get_len, _ARR_TYPE)(*arr) + func(get_len, _ARR_TYPE)(inserted));
     memcpy(tmp, *arr, index);
     memcpy(tmp+index, inserted, func(get_len, _ARR_TYPE)(inserted));
-    memcpy(tmp+index+func(get_len, _ARR_TYPE)(inserted), *arr+index, func(get_len, _ARR_TYPE)(inserted));
+    memcpy(tmp+index+func(get_len, _ARR_TYPE)(inserted), *arr+index, func(get_len, _ARR_TYPE)(*arr)-index);
     func(free, _ARR_TYPE)(*arr);
     *arr = tmp;
 }

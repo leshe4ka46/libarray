@@ -6,20 +6,17 @@
 #include "./array/array.h"
 ARR_TYPE *arr;
 ARR_TYPE *arr_to_insert;
+
 int main()
 {
-
-    //my_uint64_t_arr=(uint64_t *)calloc(sizeof(uint64_t),10)+1;
-    //my_uint64_t_arr[-1]=9;
-    //my_uint64_t_arr[5]=6;
     arr=func(init,_ARR_TYPE)(0);
     printf("%ld\n",func(get_len,_ARR_TYPE)(arr));
-    func(pub,_ARR_TYPE)(&arr,1);
-    func(pub,_ARR_TYPE)(&arr,2);
     func(pub,_ARR_TYPE)(&arr,3);
     func(pub,_ARR_TYPE)(&arr,4);
     func(pub,_ARR_TYPE)(&arr,5);
-    func(insert,_ARR_TYPE)(&arr,1,9);
+    func(puf,_ARR_TYPE)(&arr,2);
+    func(puf,_ARR_TYPE)(&arr,1);
+    func(insert,_ARR_TYPE)(&arr,2,95);
     func(print,_ARR_TYPE)(arr);
     arr_to_insert=func(init,_ARR_TYPE)(3);
     arr_to_insert[0]=55;
